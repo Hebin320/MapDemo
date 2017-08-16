@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f1"
+    >
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_margin="@dimen/dp_15"
+                android:background="@drawable/ic_transparent_bg"
+                android:drawableLeft="@drawable/ic_screen_search"
+                android:drawablePadding="@dimen/dp_8"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/dp_8"
+                android:text="请输入名称或地址.."
+                android:textColor="#d2d2d2"
+                android:textSize="@dimen/sp_16"
+                />
+
+            <ImageView
+                android:id="@+id/ivReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSearch"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/ic_reset_location"
+                />
+
+            <ImageView
+                android:id="@+id/ivsatellite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/ivReset"
+                android:layout_marginRight="@dimen/dp_15"
+                android:src="@drawable/ic_satellite"
+                />
+
+            <ImageView
+                android:id="@+id/ivNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ivsatellite"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:src="@drawable/ic_normal"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_90"
+                android:layout_alignLeft="@+id/ivNormal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dp_280"
+                android:layout_marginRight="@dimen/dp_15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/ivAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_map_add"
+                    />
+
+                <View
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_gravity="center"
+                    android:background="#d3d3d3"
+                    />
+
+                <ImageView
+                    android:id="@+id/ivReduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_map_reduce"
+                    />
+            </LinearLayout>
+
+            <com.hebin.mapdemo.MyCardView
+                android:id="@+id/cardBottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_120"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/dp_15"
+                app:cardCornerRadius="@dimen/dp_10"
+                app:card_elevation="@dimen/dp_10"
+                app:cardBackgroundColor="#FFFFFF"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_marginLeft="@dimen/dp_17"
+                        android:gravity="center"
+                        android:text="地址："
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_16"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:background="@drawable/btn_border_0dp_normal"
+                        android:gravity="center|left"
+                        android:minHeight="@dimen/dp_40"
+                        android:padding="@dimen/dp_8"
+                        android:textColor="@color/normal"
+                        android:textSize="@dimen/sp_16"
+                        />
+
+                </LinearLayout>
+            </com.hebin.mapdemo.MyCardView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>
